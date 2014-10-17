@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'llamascii'
+
+puts Llamascii::Drawer.draw(ARGV[0])
