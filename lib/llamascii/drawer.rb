@@ -13,7 +13,7 @@ module Llamascii
 
     def self.draw(message)
       d = Drawer.new(message)
-      output = ""      
+      output = ""
       output << d.draw_llama
       output << d.draw_message
     end
@@ -23,7 +23,7 @@ module Llamascii
     end
 
     def draw_message
-      return "empty" if message.empty?
+      return "" if message.nil? || message.empty?
 
       "".tap do |o|
         #o << "-".center(MAX_LINE_LENGTH+5, '-')
