@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 
-require 'llamascii'
+begin
+  require 'llamascii'
+rescue LoadError
+  puts "Uhhh, llamascii not installed"
+  puts "Run 'gem install llamascii' to get it"
+end
 
 puts Llamascii::Drawer.draw(ARGV[0])
